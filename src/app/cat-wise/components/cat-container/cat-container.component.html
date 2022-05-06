@@ -1,0 +1,5 @@
+<div>
+  <app-cat-btn #popularbtn  (click)="handleSearch()"></app-cat-btn>
+
+  <app-cat-list *ngIf="!loading" [cat]="cat" > </app-cat-list>
+</div>

@@ -12,6 +12,7 @@ import { setupTestingRouter } from '@angular/router/testing';
 })
 export class SearchService {
 
+  public ul = "";
 
   public testing :any
   public setTest(value: any) {
@@ -46,6 +47,23 @@ export class SearchService {
     .pipe(
       map((response: any) => response.items)
     );
+    }
+   getOne(id):Observable<any>
+    {
+      console.log("here get one id "+id)
+      const url=`${this.API_URL}videos?part=snippet&regionCode=in&maxResults=10&videoCategoryId=${id}&chart=mostPopular&key=${this.API_TOKEN}`;
+      this.ul=url
+      return this.http.get(url)
+      .pipe(
+        map((response: any) => response.items)
+      );
+
+}
+    getCatView(){
+      return this.http.get(this.ul)
+      .pipe(
+        map((response: any) => response.items)
+      );
     }
 }
 

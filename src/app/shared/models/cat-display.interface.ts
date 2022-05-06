@@ -1,5 +1,4 @@
-export interface Categories {
-  id:string;
+export interface CatDisplay {
   videoId: string;
   videoUrl: string;
   channelId: string;
@@ -9,5 +8,4 @@ export interface Categories {
   publishedAt: Date;
   description: string;
   thumbnail: string;
-  assignable:string;
 }

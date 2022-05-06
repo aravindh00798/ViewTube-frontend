@@ -15,6 +15,9 @@ import { PopularListComponent } from './popular/components/popular-list/popular-
 import { PopularContainerComponent } from './popular/components/popular-container/popular-container.component';
 import { PopularButtonComponent } from './popular/components/popular-button/popular-button.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { CatBtnComponent } from './cat-wise/components/cat-btn/cat-btn.component';
+import { CatContainerComponent } from './cat-wise/components/cat-container/cat-container.component';
+import { CatListComponent } from './cat-wise/components/cat-list/cat-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { CategoriesComponent } from './categories/categories.component';
     PopularListComponent,
     PopularContainerComponent,
     PopularButtonComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CatBtnComponent,
+    CatContainerComponent,
+    CatListComponent
 
   ],
   imports: [

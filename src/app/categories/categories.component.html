@@ -2,8 +2,11 @@
 
   <select (change)="onChange($event)">
       <option value="all">General</option>
-      <ng-container *ngFor="let category of cat" >
-        <option [value]="category.id" >{{category.title}}</option>
+      <ng-container *ngFor="let category of cat">
+
+        <option *ngIf="category.assignable" [value]="category.id" >{{category.title}}</option>
+
       </ng-container>
 
   </select>
+  <button (click)=" getTwo()">Click me</button>
