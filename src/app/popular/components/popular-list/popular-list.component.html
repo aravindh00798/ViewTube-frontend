@@ -1,0 +1,27 @@
+<div class="ui four column grid">
+  <div class="column" *ngFor="let popular of popular">
+    <div class="ui card">
+      <div class="image">
+        <img [src]="popular.thumbnail">
+      </div>
+      <div class="content">
+        <a class="header" style="margin: 1em 0 1em 0;">{{ popular.title }}</a>
+        <div class="meta">
+          <span class="date" style="font-weight: bolder;">
+            <a [href]="popular.channelUrl" target="_blank">{{ popular.channelTitle }}</a>
+          </span>
+          <span class="ui right floated date" style="font-weight: bolder;">{{ popular.publishedAt | date:'mediumDate' }}</span>
+        </div>
+        <div class="description">
+          {{ popular.description?.slice(0,50) }}...
+        </div>
+      </div>
+      <a [href]="popular.videoUrl" target="_blank" class="extra content">
+        <button class="ui right floated tiny red right labeled icon button">
+          <i class="external alternate icon"></i>
+          Watch
+        </button>
+      </a>
+    </div>
+  </div>
+</div>

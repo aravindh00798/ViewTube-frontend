@@ -1,0 +1,5 @@
+<div>
+  <app-popular-button (click)="handleSearch()"></app-popular-button>
+
+  <app-popular-list *ngIf="!loading" [popular]="popular" > </app-popular-list>
+</div>
